@@ -1,7 +1,7 @@
 const services = [
   {
     number: "01",
-    title: "Dead pixels & dark lines",
+    title: "Dead pixels & modules",
     description:
       "We isolate failed pixels, broken color channels, dark areas, and line defects to restore a clean, consistent image.",
     tag: "Pixel-level diagnostics",
@@ -15,10 +15,10 @@ const services = [
   },
   {
     number: "03",
-    title: "Inspection & quality testing",
+    title: "Fast turnaround",
     description:
-      "Every repair is inspected, tested, and checked for color, brightness, and signal stability before it goes back to work.",
-    tag: "Final performance check",
+      "A focused repair process and final quality test help get your LED screen back on track without unnecessary delay.",
+    tag: "Quality repair & delivery",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "HiPrime LED",
+    name: "HiPrime Solutions",
     description:
       "Florida LED screen repair service specializing in pixels, modules, panels, diagnostics, and quality testing.",
     telephone: "+1-561-866-2936",
@@ -85,11 +85,11 @@ export default function Home() {
       />
 
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="HiPrime LED home">
+        <a className="brand" href="#top" aria-label="HiPrime Solutions home">
           <PixelMark compact />
           <span className="brand-copy">
             <strong>HiPrime</strong>
-            <span>LED</span>
+            <span>Solutions</span>
           </span>
         </a>
 
@@ -109,14 +109,21 @@ export default function Home() {
         <div className="hero-glow hero-glow--red" />
         <div className="hero-glow hero-glow--blue" />
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Florida LED screen service</p>
-          <h1>
-            Every pixel<br />
-            <span>back to brilliant.</span>
+          <p className="poster-slogan">
+            <span>Because</span> <span>Every</span> <span>Pixel</span> <span>Counts</span>
+          </p>
+          <h1 className="poster-title">
+            <span>LED SCREEN</span>
+            <span className="poster-title-rgb"><b>REPAIR</b> <b>EXPERTS</b></span>
           </h1>
+          <div className="repair-manifesto">
+            <p><i>×</i> We repair.</p>
+            <p><i>↻</i> We restore.</p>
+            <p><i>✦</i> We make your screen <strong>shine.</strong></p>
+          </div>
           <p className="hero-lede">
-            Specialized LED screen and module repair with careful diagnostics,
-            precision workmanship, and a clear path from damaged to display-ready.
+            Specialized in repairing <strong>LED</strong> pixels, modules, and panels
+            with precision, quality, and fast service.
           </p>
           <div className="hero-actions">
             <a className="button button--primary" href="tel:+15618662936">
@@ -136,25 +143,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Abstract LED screen diagnostic illustration">
-          <div className="matrix-shell">
-            <div className="matrix-topline">
-              <span>HiPrime diagnostics</span>
-              <span className="live-dot">Live check</span>
-            </div>
-            <div className="led-matrix" aria-hidden="true">
-              {Array.from({ length: 252 }, (_, index) => (
-                <span key={index} className={`led led--${(index * 7 + Math.floor(index / 18)) % 19}`} />
-              ))}
-            </div>
-            <div className="diagnostic-card">
-              <span className="diagnostic-icon">✓</span>
-              <span><small>Quality test</small><strong>Display restored</strong></span>
-              <b>100%</b>
-            </div>
+        <div className="hero-visual hero-photo" role="img" aria-label="Large LED screen, city skyline, and repairable LED modules">
+          <img src="/hiprime-flyer.jpg" alt="" aria-hidden="true" />
+          <div className="hero-photo-shade" />
+          <div className="hero-photo-badge">
+            <span>Florida service</span>
+            <strong>Precision at every pixel</strong>
           </div>
-          <div className="floating-tag floating-tag--one">Dead pixels</div>
-          <div className="floating-tag floating-tag--two">Module repair</div>
         </div>
       </section>
 
@@ -196,6 +191,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="workflow-showcase" aria-label="HiPrime LED repair workflow">
+        <div className="workflow-photo" role="img" aria-label="LED screen inspection, soldering, diagnostics, and final quality testing" />
+        <div className="workflow-labels">
+          <span>Precision inspection</span>
+          <span>Expert soldering</span>
+          <span>System diagnostics</span>
+          <span>Final quality test</span>
+        </div>
+      </section>
+
       <section className="section process-section" id="process">
         <div className="process-intro">
           <p className="eyebrow eyebrow--light"><span /> How it works</p>
@@ -224,12 +229,13 @@ export default function Home() {
 
       <section className="section why-section" id="why-us">
         <div className="why-visual">
-          <div className="flyer-frame">
-            <img
-              src="/hiprime-flyer.jpg"
-              alt="HiPrime Solutions LED screen repair service flyer"
-              loading="lazy"
-            />
+          <div
+            className="repair-detail-photo"
+            role="img"
+            aria-label="Technician performing precision inspection on an LED module"
+          >
+            <span className="detail-scanline" />
+            <span className="detail-grid" />
           </div>
           <div className="precision-note">
             <span>Built around</span>
@@ -302,9 +308,9 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand brand--footer" href="#top" aria-label="HiPrime LED home">
+        <a className="brand brand--footer" href="#top" aria-label="HiPrime Solutions home">
           <PixelMark compact />
-          <span className="brand-copy"><strong>HiPrime</strong><span>LED</span></span>
+          <span className="brand-copy"><strong>HiPrime</strong><span>Solutions</span></span>
         </a>
         <p>LED screen & module repair · Florida</p>
         <p>© {currentYear} HiPrime Solutions. All rights reserved.</p>

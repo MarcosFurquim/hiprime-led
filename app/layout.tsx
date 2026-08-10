@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hiprime-led.marcosfurquim.chatgpt.site"),
   title: "HiPrime LED | LED Screen & Module Repair in Florida",
   description:
     "Precision LED screen repair for dead pixels, dark lines, damaged modules, and panel faults. Contact HiPrime LED for an assessment in Florida.",
@@ -31,11 +32,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "HiPrime LED",
+    images: [
+      {
+        url: "/og.png",
+        width: 1734,
+        height: 907,
+        alt: "HiPrime Solutions — LED Screen Repair Experts",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "HiPrime LED | LED Screen Repair",
     description: "Every pixel back to brilliant. Precision LED screen and module repair in Florida.",
+    images: ["/og.png"],
   },
 };
 

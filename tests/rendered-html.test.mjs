@@ -29,10 +29,19 @@ test("server-renders the complete HiPrime LED landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>HiPrime LED \| LED Screen &amp; Module Repair in Florida<\/title>/i);
-  assert.match(html, /Every pixel/);
-  assert.match(html, /back to brilliant/);
-  assert.match(html, /Dead pixels &amp; dark lines/);
+  assert.match(html, /Because/);
+  assert.match(html, /Every/);
+  assert.match(html, /Pixel/);
+  assert.match(html, /Counts/);
+  assert.match(html, /LED SCREEN/);
+  assert.match(html, /REPAIR/);
+  assert.match(html, /EXPERTS/);
+  assert.match(html, /Dead pixels &amp; modules/);
   assert.match(html, /LED module repair/);
+  assert.match(html, /Precision inspection/);
+  assert.match(html, /Expert soldering/);
+  assert.match(html, /System diagnostics/);
+  assert.match(html, /Final quality test/);
   assert.match(html, /tel:\+15618662936/);
   assert.match(html, /mailto:eduffurquim@gmail\.com/);
   assert.match(html, /application\/ld\+json/);

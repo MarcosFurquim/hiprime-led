@@ -952,6 +952,308 @@ footer > p:last-child {
   display: none;
 }
 
+/* Flyer-led brand direction */
+.hero {
+  grid-template-columns: minmax(550px, 0.95fr) minmax(470px, 1.05fr);
+  min-height: 860px;
+  padding-bottom: 42px;
+  padding-top: 128px;
+}
+
+.poster-slogan {
+  font-size: clamp(17px, 1.65vw, 27px);
+  font-weight: 430;
+  letter-spacing: 0.025em;
+  margin: 0 0 34px;
+}
+
+.poster-slogan span:nth-child(1) { color: var(--red); }
+.poster-slogan span:nth-child(2) { color: var(--green); }
+.poster-slogan span:nth-child(3) { color: var(--blue); }
+.poster-slogan span:nth-child(4) { color: rgba(255, 255, 255, 0.86); }
+
+.hero h1.poster-title {
+  display: flex;
+  flex-direction: column;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(66px, 6.5vw, 104px);
+  font-stretch: condensed;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero h1.poster-title > span {
+  -webkit-background-clip: initial;
+  background: none;
+  background-clip: initial;
+  color: var(--white);
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1.poster-title .poster-title-rgb {
+  display: flex;
+  gap: 0.09em;
+  margin-top: 0.1em;
+}
+
+.poster-title-rgb b:first-child {
+  color: var(--red);
+}
+
+.poster-title-rgb b:last-child {
+  -webkit-background-clip: text;
+  background: linear-gradient(90deg, var(--green) 0 45%, var(--blue) 78%);
+  background-clip: text;
+  color: transparent;
+}
+
+.repair-manifesto {
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--red), var(--green), var(--blue), transparent) 1;
+  display: grid;
+  gap: 13px;
+  margin-top: 30px;
+  max-width: 510px;
+  padding-top: 24px;
+}
+
+.repair-manifesto p {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 720;
+  gap: 13px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.repair-manifesto i {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  height: 29px;
+  justify-content: center;
+  width: 29px;
+}
+
+.repair-manifesto p:nth-child(1) i { color: var(--red); }
+.repair-manifesto p:nth-child(2) i { color: var(--green); }
+.repair-manifesto p:nth-child(3) i { color: var(--blue); }
+.repair-manifesto strong { color: #4776ff; }
+
+.hero .hero-lede {
+  font-size: 16px;
+  margin-top: 25px;
+  max-width: 520px;
+}
+
+.hero .hero-lede strong {
+  -webkit-background-clip: text;
+  background: linear-gradient(90deg, var(--red), var(--green), var(--blue));
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-photo {
+  align-self: stretch;
+  border-left: 1px solid rgba(54, 100, 255, 0.34);
+  height: 690px;
+  max-width: 680px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-photo::after {
+  border: 1px solid rgba(65, 106, 255, 0.25);
+  content: "";
+  inset: 18px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+}
+
+.hero-photo > img {
+  height: auto;
+  left: -79%;
+  max-width: none;
+  position: absolute;
+  top: -1%;
+  width: 182%;
+}
+
+.hero-photo-shade {
+  background: linear-gradient(90deg, #08090b 0%, rgba(8,9,11,0.58) 10%, transparent 37%);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.hero-photo-badge {
+  background: rgba(5, 6, 8, 0.9);
+  border-left: 3px solid var(--blue);
+  bottom: 38px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  position: absolute;
+  right: 36px;
+  z-index: 4;
+}
+
+.hero-photo-badge span {
+  color: #7f9dff;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-photo-badge strong {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.issue-strip {
+  background: #050608;
+  border-bottom-color: rgba(255,255,255,0.1);
+  color: var(--white);
+}
+
+.issue-strip > p { color: rgba(255,255,255,0.34); }
+.issue-strip i { background: linear-gradient(90deg, var(--red), var(--green), var(--blue)); }
+
+.services-section {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(36,91,255,0.14), transparent 28%),
+    #08090b;
+  color: var(--white);
+}
+
+.services-section .section-heading > p,
+.services-section .service-card > p {
+  color: rgba(255,255,255,0.5);
+}
+
+.services-section .eyebrow { color: rgba(255,255,255,0.48); }
+
+.services-section .service-card {
+  background: rgba(255,255,255,0.025);
+  border-color: rgba(255,255,255,0.13);
+}
+
+.services-section .service-card:hover {
+  background: rgba(255,255,255,0.055);
+}
+
+.services-section .service-card:nth-child(1) { border-top: 2px solid var(--red); }
+.services-section .service-card:nth-child(2) { border-top: 2px solid var(--green); }
+.services-section .service-card:nth-child(3) { border-top: 2px solid var(--blue); }
+.services-section .service-card:nth-child(1) h3 { color: #ff4d42; }
+.services-section .service-card:nth-child(2) h3 { color: #42e473; }
+.services-section .service-card:nth-child(3) h3 { color: #6688ff; }
+.services-section .service-number { color: rgba(255,255,255,0.36); }
+.services-section .service-tag { color: rgba(255,255,255,0.42); }
+
+.workflow-showcase {
+  background: #050608;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: var(--white);
+  position: relative;
+}
+
+.workflow-photo {
+  background-image: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35)), url("/hiprime-flyer.jpg");
+  background-position: center, center 82%;
+  background-repeat: no-repeat;
+  background-size: cover, 100% auto;
+  height: clamp(230px, 25vw, 380px);
+}
+
+.workflow-labels {
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.workflow-labels span {
+  background: rgba(3,4,6,0.88);
+  border-top: 3px solid var(--red);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  padding: 16px 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.workflow-labels span:nth-child(2) { border-color: var(--green); }
+.workflow-labels span:nth-child(3) { border-color: var(--blue); }
+.workflow-labels span:nth-child(4) { border-color: #7f20da; }
+
+.process-section {
+  background:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px),
+    #101216;
+  background-size: 42px 42px;
+}
+
+.why-section {
+  background: #eceae4;
+}
+
+.repair-detail-photo {
+  background-image: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.5)), url("/hiprime-flyer.jpg");
+  background-position: center, left 83%;
+  background-repeat: no-repeat;
+  background-size: cover, 400% auto;
+  box-shadow: 0 34px 80px rgba(12, 14, 20, 0.24);
+  height: 650px;
+  max-width: 480px;
+  overflow: hidden;
+  position: relative;
+  width: 92%;
+}
+
+.detail-scanline {
+  background: linear-gradient(90deg, var(--red), var(--green), var(--blue));
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 62%;
+}
+
+.detail-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.38) 1px, transparent 1.5px);
+  background-size: 12px 12px;
+  bottom: 22px;
+  height: 76px;
+  opacity: 0.35;
+  position: absolute;
+  right: 22px;
+  width: 122px;
+}
+
+.contact-section {
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--red), var(--green), var(--blue)) 1;
+}
+
 @media (max-width: 1080px) {
   .desktop-nav { display: none; }
   .hero {
@@ -960,6 +1262,8 @@ footer > p:last-child {
   }
   .hero-copy { max-width: 820px; }
   .hero-visual { justify-self: center; }
+  .hero-photo { height: 610px; max-width: 760px; }
+  .hero-photo > img { left: -66%; width: 168%; }
   .section-heading { gap: 40px; }
   .why-section { gap: 60px; }
   .precision-note { right: -18px; }
@@ -973,8 +1277,9 @@ footer > p:last-child {
     padding-bottom: 70px;
     padding-top: 132px;
   }
-  .hero h1 { font-size: clamp(54px, 14vw, 88px); }
-  .hero-visual { height: 470px; }
+  .hero h1.poster-title { font-size: clamp(55px, 12vw, 82px); }
+  .hero-visual { height: 510px; }
+  .hero-photo > img { left: -72%; width: 175%; }
   .section { padding-bottom: 88px; padding-top: 88px; }
   .section-heading,
   .process-section,
@@ -998,11 +1303,18 @@ footer > p:last-child {
   .header-cta { display: none; }
   .brand-copy strong { font-size: 22px; }
   .hero { padding-left: 20px; padding-right: 20px; }
+  .poster-slogan { font-size: 14px; margin-bottom: 24px; }
+  .hero h1.poster-title { font-size: 12.5vw; }
+  .repair-manifesto { gap: 10px; margin-top: 24px; padding-top: 20px; }
+  .repair-manifesto p { font-size: 11px; }
+  .repair-manifesto i { height: 25px; width: 25px; }
   .hero-lede { font-size: 15px; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .button { width: 100%; }
   .hero-contact-line { align-items: flex-start; flex-direction: column; gap: 9px; }
-  .hero-visual { height: 365px; margin-top: 22px; }
+  .hero-visual { height: 365px; margin-top: 8px; }
+  .hero-photo > img { left: -75%; width: 180%; }
+  .hero-photo-badge { bottom: 24px; right: 24px; }
   .matrix-shell { padding: 14px; width: 94%; }
   .led-matrix { border-width: 5px; gap: 3px; padding: 7px; }
   .diagnostic-card { bottom: -30px; left: 16px; right: 16px; }
@@ -1018,8 +1330,12 @@ footer > p:last-child {
   .section-heading { gap: 26px; }
   .service-grid { margin-top: 44px; }
   .service-card { min-height: 400px; padding: 24px; }
+  .workflow-photo { background-position: center, center 82%; background-size: cover, 185% auto; height: 290px; }
+  .workflow-labels { grid-template-columns: repeat(2, 1fr); }
+  .workflow-labels span { font-size: 8px; padding: 10px 6px; }
   .process-section { gap: 54px; }
   .why-visual { min-height: 520px; }
+  .repair-detail-photo { height: 520px; width: 94%; }
   .flyer-frame { max-height: 520px; width: 91%; }
   .precision-note { bottom: 10px; right: 0; width: 185px; }
   .faq-section { gap: 50px; }
