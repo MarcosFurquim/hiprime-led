@@ -3,6 +3,11 @@
 Marketing landing page for **HiPrime LED**, a Florida-based LED screen and
 module repair service.
 
+## Live sites
+
+- [GitHub Pages](https://marcosfurquim.github.io/hiprime-led/)
+- [OpenAI Sites](https://hiprime-led.marcosfurquim.chatgpt.site/)
+
 ## What the page includes
 
 - responsive service-focused landing page
@@ -27,6 +32,7 @@ Open `http://localhost:3000`.
 
 ```bash
 npm test
+npm run build:pages
 ```
 
 ## Contact
