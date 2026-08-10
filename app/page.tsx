@@ -29,6 +29,33 @@ const process = [
   ["04", "Final quality test", "The repaired module is tested for a stable, consistent result."],
 ];
 
+const repairStages = [
+  {
+    number: "01",
+    title: "Precision inspection",
+    detail: "Pixel map & visual check",
+    tone: "red",
+  },
+  {
+    number: "02",
+    title: "Expert soldering",
+    detail: "Component-level repair",
+    tone: "green",
+  },
+  {
+    number: "03",
+    title: "System diagnostics",
+    detail: "Signal & color validation",
+    tone: "blue",
+  },
+  {
+    number: "04",
+    title: "Final quality test",
+    detail: "Stable output confirmed",
+    tone: "violet",
+  },
+];
+
 const faqs = [
   {
     question: "What LED screen problems do you repair?",
@@ -143,8 +170,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual hero-photo" role="img" aria-label="Large LED screen, city skyline, and repairable LED modules">
-          <img src="/hiprime-flyer.jpg" alt="" aria-hidden="true" />
+        <div className="hero-visual hero-photo">
+          <img
+            src="/led-repair-workshop.webp"
+            alt="Technician inspecting a professional LED display module under a precision microscope"
+          />
           <div className="hero-photo-shade" />
           <div className="hero-photo-badge">
             <span>Florida service</span>
@@ -192,12 +222,19 @@ export default function Home() {
       </section>
 
       <section className="workflow-showcase" aria-label="HiPrime LED repair workflow">
-        <div className="workflow-photo" role="img" aria-label="LED screen inspection, soldering, diagnostics, and final quality testing" />
-        <div className="workflow-labels">
-          <span>Precision inspection</span>
-          <span>Expert soldering</span>
-          <span>System diagnostics</span>
-          <span>Final quality test</span>
+        <div className="workflow-grid">
+          {repairStages.map((stage) => (
+            <article className={`workflow-stage workflow-stage--${stage.tone}`} key={stage.number}>
+              <div className="workflow-stage-visual" aria-hidden="true">
+                <span /><span /><span /><span /><span /><span /><span /><span /><span />
+              </div>
+              <div className="workflow-stage-copy">
+                <small>{stage.number}</small>
+                <strong>{stage.title}</strong>
+                <span>{stage.detail}</span>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

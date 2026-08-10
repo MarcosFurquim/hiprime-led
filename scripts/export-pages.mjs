@@ -12,7 +12,10 @@ const pagesUrl = (process.env.GITHUB_PAGES_URL || "https://marcosfurquim.github.
 function prefixStaticPaths(html) {
   return html
     .replace(/([="'(])\/_next\//g, `$1${basePath}/_next/`)
-    .replace(/([="'(])\/(hiprime-flyer\.jpg|og\.png)/g, `$1${basePath}/$2`)
+    .replace(
+      /([="'(])\/(hiprime-flyer\.jpg|led-repair-workshop\.webp|og\.png)/g,
+      `$1${basePath}/$2`,
+    )
     .replaceAll(
       "https://hiprime-led.marcosfurquim.chatgpt.site",
       pagesUrl,
@@ -72,8 +75,8 @@ async function rewriteCssAssets() {
         await writeFile(
           cssPath,
           css.replaceAll(
-            "url(/hiprime-flyer.jpg)",
-            `url(${basePath}/hiprime-flyer.jpg)`,
+            "url(/led-repair-workshop.webp)",
+            `url(${basePath}/led-repair-workshop.webp)`,
           ),
         );
       }),
