@@ -5,7 +5,7 @@ module repair service.
 
 ## Live sites
 
-- [GitHub Pages](https://marcosfurquim.github.io/hiprime-led/)
+- [GitHub Pages](https://hiprimeledrepair.com/)
 - [OpenAI Sites](https://hiprime-led.marcosfurquim.chatgpt.site/)
 
 ## What the page includes

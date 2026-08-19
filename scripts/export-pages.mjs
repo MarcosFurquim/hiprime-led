@@ -6,8 +6,8 @@ const projectRoot = resolve(new URL("..", import.meta.url).pathname);
 const clientRoot = join(projectRoot, "dist", "client");
 const serverEntry = join(projectRoot, "dist", "server", "index.js");
 const outputRoot = join(projectRoot, "pages-dist");
-const basePath = (process.env.GITHUB_PAGES_BASE_PATH || "/hiprime-led").replace(/\/$/, "");
-const pagesUrl = (process.env.GITHUB_PAGES_URL || "https://marcosfurquim.github.io/hiprime-led").replace(/\/$/, "");
+const basePath = (process.env.GITHUB_PAGES_BASE_PATH ?? "").replace(/\/$/, "");
+const pagesUrl = (process.env.GITHUB_PAGES_URL || "https://hiprimeledrepair.com").replace(/\/$/, "");
 
 function prefixStaticPaths(html) {
   return html
