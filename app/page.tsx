@@ -1,81 +1,51 @@
 const services = [
   {
     number: "01",
-    title: "Dead pixels & modules",
+    title: "Dead pixels & dark lines",
     description:
-      "We isolate failed pixels, broken color channels, dark areas, and line defects to restore a clean, consistent image.",
-    tag: "Pixel-level diagnostics",
+      "Diagnosis and repair of dead pixels, failed color channels, lines, and dark areas.",
+    tag: "Pixel and row faults",
   },
   {
     number: "02",
-    title: "LED module repair",
+    title: "Damaged LED modules",
     description:
-      "From damaged components to connection failures, we troubleshoot and repair LED modules with component-level precision.",
-    tag: "Module & panel service",
+      "Repair of damaged modules, solder points, electronic components, and connections.",
+    tag: "Module repair",
   },
   {
     number: "03",
-    title: "Fast turnaround",
+    title: "Diagnostics & testing",
     description:
-      "A focused repair process and final quality test help get your LED screen back on track without unnecessary delay.",
-    tag: "Quality repair & delivery",
+      "Image, color, signal, and stability checks during diagnosis and after the repair.",
+    tag: "Final testing",
   },
-];
-
-const process = [
-  ["01", "Share the issue", "Send photos or video, the screen model, and a short description of the problem."],
-  ["02", "Get an assessment", "We review the symptoms and explain the recommended repair path."],
-  ["03", "Precision repair", "The affected pixels, connections, or module components are carefully serviced."],
-  ["04", "Final quality test", "The repaired module is tested for a stable, consistent result."],
 ];
 
 const repairStages = [
   {
     number: "01",
-    title: "Precision inspection",
-    detail: "Pixel map & visual check",
+    title: "Inspection",
+    detail: "Module and pixel check",
     tone: "red",
   },
   {
     number: "02",
-    title: "Expert soldering",
-    detail: "Component-level repair",
+    title: "Soldering",
+    detail: "Components & connections",
     tone: "green",
   },
   {
     number: "03",
-    title: "System diagnostics",
-    detail: "Signal & color validation",
+    title: "Diagnostics",
+    detail: "Signal and color check",
     tone: "blue",
   },
   {
     number: "04",
-    title: "Final quality test",
-    detail: "Stable output confirmed",
+    title: "Testing",
+    detail: "Final operation check",
     tone: "violet",
-  },
-];
-
-const faqs = [
-  {
-    question: "What LED screen problems do you repair?",
-    answer:
-      "HiPrime LED works on dead pixels, missing colors, dark lines or sections, damaged modules, connection issues, and other common LED panel faults.",
-  },
-  {
-    question: "What should I send for an estimate?",
-    answer:
-      "Send clear photos or a short video of the issue, the brand or model when available, the module size, and your location. That gives us the best starting point for an assessment.",
-  },
-  {
-    question: "How long does a repair take?",
-    answer:
-      "Turnaround depends on the type of failure, the number of affected modules, and component availability. Contact us with the details and we’ll give you the clearest timeline possible.",
-  },
-  {
-    question: "Do you work with commercial LED displays?",
-    answer:
-      "Yes. The service is focused on professional LED modules and panels used in commercial displays, events, installations, and large-format screens.",
   },
 ];
 
@@ -97,7 +67,7 @@ export default function Home() {
     "@type": "ProfessionalService",
     name: "HiPrime Solutions",
     description:
-      "Florida LED screen repair service specializing in pixels, modules, panels, diagnostics, and quality testing.",
+      "LED screen and module repair in Florida for dead pixels, dark lines, damaged modules, and connection faults.",
     telephone: "+1-561-866-2936",
     email: "eduffurquim@gmail.com",
     areaServed: "Florida",
@@ -122,9 +92,8 @@ export default function Home() {
 
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#why-us">Why HiPrime</a>
-          <a href="#faq">FAQ</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <a className="header-cta" href="tel:+15618662936">
@@ -136,35 +105,34 @@ export default function Home() {
         <div className="hero-glow hero-glow--red" />
         <div className="hero-glow hero-glow--blue" />
         <div className="hero-copy">
-          <p className="poster-slogan">
-            <span>Because</span> <span>Every</span> <span>Pixel</span> <span>Counts</span>
-          </p>
+          <p className="poster-slogan">LED screen &amp; module repair · Florida</p>
           <h1 className="poster-title">
             <span>LED SCREEN</span>
-            <span className="poster-title-rgb"><b>REPAIR</b> <b>EXPERTS</b></span>
+            <span className="poster-title-rgb"><b>REPAIR</b> <b>SERVICE</b></span>
           </h1>
           <div className="repair-manifesto">
-            <p><i>×</i> We repair.</p>
-            <p><i>↻</i> We restore.</p>
-            <p><i>✦</i> We make your screen <strong>shine.</strong></p>
+            <p><i>×</i> Dead pixels</p>
+            <p><i>↻</i> Damaged modules</p>
+            <p><i>✦</i> Color &amp; <strong>signal faults</strong></p>
           </div>
           <p className="hero-lede">
-            Specialized in repairing <strong>LED</strong> pixels, modules, and panels
-            with precision, quality, and fast service.
+            HiPrime Solutions repairs <strong>LED</strong> screens and modules used in
+            commercial displays and installations. Call or email to discuss the screen,
+            model, and fault.
           </p>
           <div className="hero-actions">
             <a className="button button--primary" href="tel:+15618662936">
-              Call for an assessment <span aria-hidden="true">↗</span>
+              Call HiPrime <span aria-hidden="true">↗</span>
             </a>
             <a
               className="button button--ghost"
               href="mailto:eduffurquim@gmail.com?subject=LED%20Screen%20Repair%20Request"
             >
-              Email photos of the issue
+              Email HiPrime
             </a>
           </div>
           <div className="hero-contact-line">
-            <span>Fast response</span>
+            <span>Phone and email</span>
             <a href="tel:+15618662936">561 866 2936</a>
             <a href="mailto:eduffurquim@gmail.com">eduffurquim@gmail.com</a>
           </div>
@@ -177,14 +145,14 @@ export default function Home() {
           />
           <div className="hero-photo-shade" />
           <div className="hero-photo-badge">
-            <span>Florida service</span>
-            <strong>Precision at every pixel</strong>
+            <span>HiPrime Solutions</span>
+            <strong>LED repair in Florida</strong>
           </div>
         </div>
       </section>
 
       <section className="issue-strip" aria-label="Common LED screen issues">
-        <p>Built for the problems that stop a screen from performing</p>
+        <p>Common repairs</p>
         <div>
           <span>Dead pixels</span><i />
           <span>Dark lines</span><i />
@@ -197,12 +165,12 @@ export default function Home() {
       <section className="section services-section" id="services">
         <div className="section-heading">
           <div>
-            <p className="eyebrow"><span /> Expert LED repair</p>
-            <h2>Repair the fault.<br /><em>Protect the display.</em></h2>
+            <p className="eyebrow"><span /> Services</p>
+            <h2>LED screen and module repair</h2>
           </div>
           <p>
-            Focused service for the pixels, modules, and connections behind a
-            professional LED screen—without vague promises or unnecessary replacements.
+            We work on LED modules and panels from different manufacturers, including
+            equipment used in commercial displays, events, and installations.
           </p>
         </div>
 
@@ -238,33 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section process-section" id="process">
-        <div className="process-intro">
-          <p className="eyebrow eyebrow--light"><span /> How it works</p>
-          <h2>From first photo<br />to final test.</h2>
-          <p>
-            Start with the issue you can see. We’ll help identify what is happening
-            behind the panel and map the next step.
-          </p>
-          <a className="text-link" href="mailto:eduffurquim@gmail.com?subject=LED%20Screen%20Repair%20Assessment">
-            Start your assessment <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <div className="process-list">
-          {process.map(([number, title, description]) => (
-            <article className="process-step" key={number}>
-              <span className="process-number">{number}</span>
-              <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section why-section" id="why-us">
+      <section className="section why-section" id="about">
         <div className="why-visual">
           <div
             className="repair-detail-photo"
@@ -275,73 +217,44 @@ export default function Home() {
             <span className="detail-grid" />
           </div>
           <div className="precision-note">
-            <span>Built around</span>
-            <strong>precision.</strong>
+            <span>Module inspection</span>
+            <strong>and repair</strong>
           </div>
         </div>
 
         <div className="why-copy">
-          <p className="eyebrow"><span /> Why HiPrime</p>
-          <h2>Careful work where every connection counts.</h2>
+          <p className="eyebrow"><span /> About HiPrime</p>
+          <h2>LED repair service in Florida</h2>
           <p className="why-lede">
-            LED modules reward precision. HiPrime brings a focused repair mindset
-            to each diagnosis—from the first inspection to the final display test.
+            HiPrime Solutions provides LED screen and module repair for dead pixels,
+            dark lines, missing colors, damaged modules, and connection faults.
           </p>
-
-          <div className="benefit-list">
-            <article>
-              <span>01</span>
-              <div><h3>Component-level attention</h3><p>Focused troubleshooting at the pixel, connection, and module level.</p></div>
-            </article>
-            <article>
-              <span>02</span>
-              <div><h3>Clear, practical assessment</h3><p>A straightforward repair path based on the actual symptoms you share.</p></div>
-            </article>
-            <article>
-              <span>03</span>
-              <div><h3>Quality before handoff</h3><p>Final testing helps confirm the repaired display is ready to perform.</p></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section faq-section" id="faq">
-        <div className="faq-heading">
-          <p className="eyebrow"><span /> Common questions</p>
-          <h2>Before you send<br />the first photo.</h2>
-          <p>Have a different issue? Call or email and describe what the screen is doing.</p>
-        </div>
-        <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <details key={faq.question} open={index === 0}>
-              <summary>{faq.question}<span aria-hidden="true">+</span></summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
+          <p className="why-lede">
+            For repair inquiries, call 561 866 2936 or email eduffurquim@gmail.com.
+          </p>
         </div>
       </section>
 
       <section className="contact-section" id="contact">
         <div className="contact-glow" />
         <PixelMark />
-        <p className="eyebrow eyebrow--light"><span /> Let’s bring it back</p>
-        <h2>Show us what<br /><em>the screen is doing.</em></h2>
+        <p className="eyebrow eyebrow--light"><span /> Contact</p>
+        <h2>Phone and email</h2>
         <p className="contact-lede">
-          Send a photo or short video, the screen or module model, and your location.
-          We’ll start with a practical assessment.
+          For repair inquiries, provide the screen or module model if available,
+          describe the fault, and include your location.
         </p>
         <div className="contact-actions">
           <a className="button button--light" href="tel:+15618662936">
-            Call 561 866 2936 <span aria-hidden="true">↗</span>
+            561 866 2936 <span aria-hidden="true">↗</span>
           </a>
           <a
             className="button button--outline-light"
-            href="mailto:eduffurquim@gmail.com?subject=LED%20Screen%20Repair%20Request&body=Hi%20Eduardo%2C%0A%0AI%20need%20help%20with%20an%20LED%20screen.%20Here%20are%20the%20details%3A%0A"
+            href="mailto:eduffurquim@gmail.com?subject=LED%20Screen%20Repair%20Request&body=Hi%20HiPrime%2C%0A%0AI%20need%20help%20with%20an%20LED%20screen.%20Here%20are%20the%20details%3A%0A"
           >
-            Email your repair details
+            eduffurquim@gmail.com
           </a>
         </div>
-        <p className="contact-email">eduffurquim@gmail.com</p>
       </section>
 
       <footer>

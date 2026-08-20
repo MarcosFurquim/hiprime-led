@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hiprime-led.marcosfurquim.chatgpt.site"),
   title: "HiPrime LED | LED Screen & Module Repair in Florida",
   description:
-    "Precision LED screen repair for dead pixels, dark lines, damaged modules, and panel faults. Contact HiPrime LED for an assessment in Florida.",
+    "Dead pixels, dark lines, or a damaged LED module? Call or email HiPrime for an LED screen repair assessment in Florida.",
   keywords: [
     "LED screen repair",
     "LED module repair",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   ],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "HiPrime LED | Every Pixel Back to Brilliant",
+    title: "HiPrime LED Screen & Module Repair in Florida",
     description:
-      "Precision LED screen and module repair for dead pixels, dark lines, damaged modules, and display faults.",
+      "LED screen and module repair in Florida for dead pixels, dark lines, damaged modules, color faults, and more.",
     type: "website",
     locale: "en_US",
     siteName: "HiPrime LED",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "HiPrime LED | LED Screen Repair",
-    description: "Every pixel back to brilliant. Precision LED screen and module repair in Florida.",
+    description: "LED screen and module repair in Florida.",
     images: ["/og.png"],
   },
 };
