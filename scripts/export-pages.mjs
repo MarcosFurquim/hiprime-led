@@ -13,7 +13,7 @@ function prefixStaticPaths(html) {
   return html
     .replace(/([="'(])\/_next\//g, `$1${basePath}/_next/`)
     .replace(
-      /([="'(])\/(hiprime-flyer\.jpg|led-repair-rgb-test\.webp|led-repair-measurement\.webp|og\.png)/g,
+      /([="'(])\/(hiprime-flyer\.jpg|led-repair-rgb-test\.webp|led-repair-measurement\.webp|eduardo-led-repair-workshop\.webp|og\.png)/g,
       `$1${basePath}/$2`,
     )
     .replaceAll(

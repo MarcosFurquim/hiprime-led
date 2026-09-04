@@ -39,12 +39,18 @@ test("server-renders the complete HiPrime LED landing page", async () => {
   assert.match(html, /LED repair service in Florida/);
   assert.match(html, /led-repair-rgb-test\.webp/);
   assert.match(html, /led-repair-measurement\.webp/);
-  assert.doesNotMatch(html, /led-repair-workshop\.webp/);
+  assert.match(html, /eduardo-led-repair-workshop\.webp/);
+  assert.doesNotMatch(html, /(?:src|href)="\/led-repair-workshop\.webp"/);
   assert.doesNotMatch(html, /hiprime-flyer\.jpg/);
   assert.match(html, /tel:\+15618662936/);
   assert.match(html, /mailto:eduffurquim@gmail\.com/);
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /ProfessionalService/);
+  assert.match(html, /Watch the repair in action/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/cor6zQRBLBs/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/IpeVgbYATDE/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/GlF38LbitPY/);
+  assert.match(html, /youtube\.com\/@HiPrimeLED\/shorts/);
 });
 
 test("does not ship the disposable starter preview", async () => {

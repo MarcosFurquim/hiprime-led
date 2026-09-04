@@ -49,6 +49,21 @@ const repairStages = [
   },
 ];
 
+const youtubeShorts = [
+  {
+    id: "cor6zQRBLBs",
+    title: "LED Module Repair | Pixel Replacement P2.6 mm",
+  },
+  {
+    id: "IpeVgbYATDE",
+    title: "Fixing a Dead Pixel on a 2.6 mm LED Module",
+  },
+  {
+    id: "GlF38LbitPY",
+    title: "LED Pixel Replacement & Testing",
+  },
+];
+
 function PixelMark({ compact = false }: { compact?: boolean }) {
   return (
     <span className={`pixel-mark${compact ? " pixel-mark--compact" : ""}`} aria-hidden="true">
@@ -93,6 +108,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
           <a href="#about">About</a>
+          <a href="#videos">Videos</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -113,7 +129,10 @@ export default function Home() {
           <div className="repair-manifesto">
             <p><i>×</i> Dead pixels</p>
             <p><i>↻</i> Damaged modules</p>
-            <p><i>✦</i> Color &amp; <strong>signal faults</strong></p>
+            <p>
+              <i>✦</i>
+              <span className="manifesto-label">Color &amp; <strong>signal faults</strong></span>
+            </p>
           </div>
           <p className="hero-lede">
             HiPrime Solutions repairs <strong>LED</strong> screens and modules used in
@@ -215,10 +234,10 @@ export default function Home() {
             />
             <span className="detail-scanline" />
             <span className="detail-grid" />
-          </div>
-          <div className="precision-note">
-            <span>Module inspection</span>
-            <strong>and repair</strong>
+            <div className="precision-note">
+              <span>Module inspection</span>
+              <strong>and repair</strong>
+            </div>
           </div>
         </div>
 
@@ -232,6 +251,65 @@ export default function Home() {
           <p className="why-lede">
             For repair inquiries, call 561 866 2936 or email eduffurquim@gmail.com.
           </p>
+        </div>
+      </section>
+
+      <section className="video-section" id="videos">
+        <div className="video-section-heading">
+          <div>
+            <p className="eyebrow eyebrow--light"><span /> On YouTube</p>
+            <h2>Watch the repair in action</h2>
+          </div>
+          <div className="video-section-intro">
+            <p>
+              See real LED module diagnostics, pixel replacement, soldering, and final
+              testing from the HiPrime workbench.
+            </p>
+            <a
+              className="text-link video-channel-link"
+              href="https://www.youtube.com/@HiPrimeLED/shorts"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View all videos <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <figure className="video-banner">
+          <img
+            src="/eduardo-led-repair-workshop.webp"
+            alt="HiPrime illustration of Eduardo repairing an LED module at the workbench"
+          />
+          <figcaption>HiPrime LED · Bench repair and testing</figcaption>
+        </figure>
+
+        <div className="shorts-grid">
+          {youtubeShorts.map((video, index) => (
+            <article className={`youtube-short youtube-short--${index + 1}`} key={video.id}>
+              <div className="youtube-short-frame">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                  title={video.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <div className="youtube-short-copy">
+                <span>0{index + 1}</span>
+                <h3>{video.title}</h3>
+                <a
+                  href={`https://www.youtube.com/shorts/${video.id}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Watch on YouTube <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
