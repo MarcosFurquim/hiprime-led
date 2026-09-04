@@ -1336,6 +1336,14 @@ footer > p:last-child {
 }
 
 @media (min-width: 1081px) {
+  .repair-manifesto i {
+    border-width: 2px;
+    flex-basis: 40px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+  }
+
   .service-tag {
     font-size: 13px;
     letter-spacing: 0.1em;
