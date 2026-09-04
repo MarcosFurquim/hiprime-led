@@ -1341,17 +1341,17 @@ footer > p:last-child {
   border: 1px solid rgba(255,44,31,0.28);
   border-radius: 50%;
   display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(3, 8px);
+  gap: 6px;
+  grid-template-columns: repeat(3, 10px);
   justify-content: center;
-  width: 76px;
+  width: 94px;
 }
 
 .workflow-stage-visual > span {
   background: rgba(255,255,255,0.16);
   border-radius: 50%;
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
 }
 
 .workflow-stage--red .workflow-stage-visual > span:nth-child(5),
@@ -1398,18 +1398,9 @@ footer > p:last-child {
   align-self: end;
 }
 
-.workflow-stage-copy small,
 .workflow-stage-copy strong,
 .workflow-stage-copy span {
   display: block;
-}
-
-.workflow-stage-copy small {
-  color: rgba(255,255,255,0.34);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
-  letter-spacing: 0.15em;
-  margin-bottom: 13px;
 }
 
 .workflow-stage-copy strong {
@@ -1430,9 +1421,15 @@ footer > p:last-child {
     padding: 36px;
   }
 
-  .workflow-stage-copy small {
-    font-size: 12px;
-    margin-bottom: 16px;
+  .workflow-stage-visual {
+    gap: 7px;
+    grid-template-columns: repeat(3, 12px);
+    width: 112px;
+  }
+
+  .workflow-stage-visual > span {
+    height: 12px;
+    width: 12px;
   }
 
   .workflow-stage-copy strong {

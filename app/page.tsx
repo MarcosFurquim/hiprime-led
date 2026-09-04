@@ -24,25 +24,21 @@ const services = [
 
 const repairStages = [
   {
-    number: "01",
     title: "Inspection",
     detail: "Module and pixel check",
     tone: "red",
   },
   {
-    number: "02",
     title: "Soldering",
     detail: "Components & connections",
     tone: "green",
   },
   {
-    number: "03",
     title: "Diagnostics",
     detail: "Signal and color check",
     tone: "blue",
   },
   {
-    number: "04",
     title: "Testing",
     detail: "Final operation check",
     tone: "violet",
@@ -211,12 +207,11 @@ export default function Home() {
       <section className="workflow-showcase" aria-label="HiPrime LED repair workflow">
         <div className="workflow-grid">
           {repairStages.map((stage) => (
-            <article className={`workflow-stage workflow-stage--${stage.tone}`} key={stage.number}>
+            <article className={`workflow-stage workflow-stage--${stage.tone}`} key={stage.tone}>
               <div className="workflow-stage-visual" aria-hidden="true">
                 <span /><span /><span /><span /><span /><span /><span /><span /><span />
               </div>
               <div className="workflow-stage-copy">
-                <small>{stage.number}</small>
                 <strong>{stage.title}</strong>
                 <span>{stage.detail}</span>
               </div>
