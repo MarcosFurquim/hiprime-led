@@ -114,6 +114,12 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
+        <img
+          className="hero-background"
+          src="/eduardo-led-repair-hero.webp"
+          alt="Illustration of Eduardo repairing an LED module at the HiPrime workbench"
+        />
+        <div className="hero-background-shade" />
         <div className="hero-glow hero-glow--red" />
         <div className="hero-glow hero-glow--blue" />
         <div className="hero-copy">
@@ -153,17 +159,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual hero-photo">
-          <img
-            src="/led-repair-rgb-test.webp"
-            alt="Real LED display module undergoing an RGB diagnostic test"
-          />
-          <div className="hero-photo-shade" />
-          <div className="hero-photo-badge">
-            <span>HiPrime Solutions</span>
-            <strong>LED repair in Florida</strong>
-          </div>
-        </div>
       </section>
 
       <section className="issue-strip" aria-label="Common LED screen issues">
@@ -270,14 +265,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-
-        <figure className="video-banner">
-          <img
-            src="/eduardo-led-repair-workshop.webp"
-            alt="HiPrime illustration of Eduardo repairing an LED module at the workbench"
-          />
-          <figcaption>HiPrime LED · Bench repair and testing</figcaption>
-        </figure>
 
         <div className="shorts-grid">
           {youtubeShorts.map((video, index) => (
