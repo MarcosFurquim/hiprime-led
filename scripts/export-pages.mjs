@@ -13,7 +13,7 @@ function prefixStaticPaths(html) {
   return html
     .replace(/([="'(])\/_next\//g, `$1${basePath}/_next/`)
     .replace(
-      /([="'(])\/(hiprime-flyer\.jpg|led-repair-workshop\.webp|og\.png)/g,
+      /([="'(])\/(hiprime-flyer\.jpg|led-repair-rgb-test\.webp|led-repair-measurement\.webp|og\.png)/g,
       `$1${basePath}/$2`,
     )
     .replaceAll(
@@ -72,12 +72,18 @@ async function rewriteCssAssets() {
       .map(async (entry) => {
         const cssPath = join(cssRoot, entry.name);
         const css = await readFile(cssPath, "utf8");
+        const rewrittenCss = css
+          .replaceAll(
+            "url(/led-repair-rgb-test.webp)",
+            `url(${basePath}/led-repair-rgb-test.webp)`,
+          )
+          .replaceAll(
+            "url(/led-repair-measurement.webp)",
+            `url(${basePath}/led-repair-measurement.webp)`,
+          );
         await writeFile(
           cssPath,
-          css.replaceAll(
-            "url(/led-repair-workshop.webp)",
-            `url(${basePath}/led-repair-workshop.webp)`,
-          ),
+          rewrittenCss,
         );
       }),
   );

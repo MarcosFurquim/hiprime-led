@@ -140,8 +140,8 @@ export default function Home() {
 
         <div className="hero-visual hero-photo">
           <img
-            src="/led-repair-workshop.webp"
-            alt="Technician inspecting a professional LED display module under a precision microscope"
+            src="/led-repair-rgb-test.webp"
+            alt="Real LED display module undergoing an RGB diagnostic test"
           />
           <div className="hero-photo-shade" />
           <div className="hero-photo-badge">
@@ -208,11 +208,11 @@ export default function Home() {
 
       <section className="section why-section" id="about">
         <div className="why-visual">
-          <div
-            className="repair-detail-photo"
-            role="img"
-            aria-label="Technician performing precision inspection on an LED module"
-          >
+          <div className="repair-detail-photo">
+            <img
+              src="/led-repair-measurement.webp"
+              alt="Real LED module being measured with a caliper during inspection"
+            />
             <span className="detail-scanline" />
             <span className="detail-grid" />
           </div>

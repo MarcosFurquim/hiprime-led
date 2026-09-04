@@ -37,7 +37,9 @@ test("server-renders the complete HiPrime LED landing page", async () => {
   assert.match(html, /Damaged LED modules/);
   assert.match(html, /Diagnostics &amp; testing/);
   assert.match(html, /LED repair service in Florida/);
-  assert.match(html, /led-repair-workshop\.webp/);
+  assert.match(html, /led-repair-rgb-test\.webp/);
+  assert.match(html, /led-repair-measurement\.webp/);
+  assert.doesNotMatch(html, /led-repair-workshop\.webp/);
   assert.doesNotMatch(html, /hiprime-flyer\.jpg/);
   assert.match(html, /tel:\+15618662936/);
   assert.match(html, /mailto:eduffurquim@gmail\.com/);
