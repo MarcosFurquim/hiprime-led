@@ -552,12 +552,6 @@ main {
   transform: translateY(-4px);
 }
 
-.service-number {
-  color: #9b9da2;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
-}
-
 .service-symbol {
   display: grid;
   gap: 6px;
@@ -1223,7 +1217,6 @@ footer > p:last-child {
 .services-section .service-card:nth-child(1) h3 { color: #ff4d42; }
 .services-section .service-card:nth-child(2) h3 { color: #42e473; }
 .services-section .service-card:nth-child(3) h3 { color: #6688ff; }
-.services-section .service-number { color: rgba(255,255,255,0.36); }
 .services-section .service-tag { color: rgba(255,255,255,0.42); }
 
 .workflow-showcase {
@@ -1343,6 +1336,16 @@ footer > p:last-child {
 }
 
 @media (min-width: 1081px) {
+  .service-tag {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+
+  .service-tag span {
+    height: 6px;
+    width: 6px;
+  }
+
   .workflow-stage {
     min-height: 300px;
     padding: 36px;

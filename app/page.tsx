@@ -1,20 +1,20 @@
 const services = [
   {
-    number: "01",
+    symbol: "01",
     title: "Dead pixels & dark lines",
     description:
       "Diagnosis and repair of dead pixels, failed color channels, lines, and dark areas.",
     tag: "Pixel and row faults",
   },
   {
-    number: "02",
+    symbol: "02",
     title: "Damaged LED modules",
     description:
       "Repair of damaged modules, solder points, electronic components, and connections.",
     tag: "Module repair",
   },
   {
-    number: "03",
+    symbol: "03",
     title: "Diagnostics & testing",
     description:
       "Image, color, signal, and stability checks during diagnosis and after the repair.",
@@ -186,9 +186,8 @@ export default function Home() {
 
         <div className="service-grid">
           {services.map((service) => (
-            <article className="service-card" key={service.number}>
-              <div className="service-number">{service.number}</div>
-              <div className={`service-symbol service-symbol--${service.number}`} aria-hidden="true">
+            <article className="service-card" key={service.title}>
+              <div className={`service-symbol service-symbol--${service.symbol}`} aria-hidden="true">
                 <span /><span /><span /><span /><span /><span /><span /><span /><span />
               </div>
               <h3>{service.title}</h3>
